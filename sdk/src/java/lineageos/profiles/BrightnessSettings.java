@@ -16,6 +16,10 @@
 
 package lineageos.profiles;
 
+import static java.lang.Math.exp;
+import static java.lang.Math.round;
+import static java.lang.Math.toIntExact;
+
 import android.content.Context;
 import android.provider.Settings;
 import android.os.Parcel;
@@ -145,9 +149,22 @@ public final class BrightnessSettings implements Parcelable {
             } else {
                 final int current = Settings.System.getInt(context.getContentResolver(),
                         Settings.System.SCREEN_BRIGHTNESS, -1);
-                if (current != mValue) {
+
+                // Adjust to new logaritmic Android scale
+                float percentage = mValue / 255f * 100f;
+                int adj = 1;
+
+                if (percentage <= 1) {
+                    adj = 1;
+                } else if (percentage >= 100) {
+                    adj = 255;
+                } else {
+                    adj = toIntExact(round(exp((percentage + 9.411) / 19.811)));
+                }
+
+                if (current != adj) {
                     Settings.System.putInt(context.getContentResolver(),
-                            Settings.System.SCREEN_BRIGHTNESS, mValue);
+                            Settings.System.SCREEN_BRIGHTNESS, adj);
                 }
             }
         }
