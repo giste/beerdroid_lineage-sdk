@@ -272,16 +272,19 @@ public final class ConnectionSettings implements Parcelable {
 
         switch (getConnectionId()) {
             case PROFILE_CONNECTION_MOBILEDATA:
-                List<SubscriptionInfo> list = sm.getActiveSubscriptionInfoList();
-                if (list != null) {
-                    for (int i = 0; i < list.size(); i++) {
-                        int subId = list.get(i).getSubscriptionId();
-                        int slotIndex = list.get(i).getSimSlotIndex();
-                        currentState = tm.getDataEnabled(subId);
-                        if (forcedState != currentState) {
-                            Settings.Global.putInt(context.getContentResolver(),
-                                    Settings.Global.MOBILE_DATA + i, (forcedState) ? 1 : 0);
-                            tm.setDataEnabled(subId, forcedState);
+                TelephonyManager telephonyManager;
+                boolean dataEnabled = false;
+                boolean foundActive = false;
+
+                List<SubscriptionInfo> subInfoList = sm.getActiveSubscriptionInfoList(true);
+                if (subInfoList != null) {
+                    for (SubscriptionInfo subInfo : subInfoList) {
+                        telephonyManager = tm.createForSubscriptionId(subInfo.getSubscriptionId());
+                        dataEnabled = telephonyManager.getDataEnabled();
+                        if (!subInfo.isOpportunistic() || !dataEnabled) {
+                            telephonyManager.setDataEnabled(!dataEnabled && !foundActive);
+                            // Indicate we found sim with active data, disable data on remaining sim.
+                            if (!foundActive) foundActive = !dataEnabled;
                         }
                     }
                 }
