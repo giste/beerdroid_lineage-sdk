@@ -289,13 +289,13 @@ public final class ConnectionSettings implements Parcelable {
                         logger.log(Level.INFO, "Current state (" + subInfo.getDisplayName() + ") = " + currentState);
                         logger.log(Level.INFO, "Is opportunistic (" + subInfo.getDisplayName() + ") = " + subInfo.isOpportunistic());
 
-                        if (forcedState != currentState) {
-                            if (!subInfo.isOpportunistic() || forcedState) {
+                        if (!subInfo.isOpportunistic() || forcedState) {
+                            if (forcedState != currentState) {
                                 subTm.setDataEnabled(forcedState && !foundActive);
-                                if (!foundActive) {
-                                    foundActive = forcedState;
-                                    logger.log(Level.INFO, "Found active = " + foundActive);
-                                }
+                            }
+                            if (!foundActive) {
+                                foundActive = forcedState;
+                                logger.log(Level.INFO, "Found active = " + foundActive);
                             }
                         }
                     }
