@@ -45,9 +45,6 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.List;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  * The {@link ConnectionSettings} class allows for creating Network/Hardware overrides
  * depending on their capabilities.
@@ -63,8 +60,6 @@ import java.util.logging.Logger;
  * </pre>
  */
 public final class ConnectionSettings implements Parcelable {
-
-    private static final Logger logger = Logger.getLogger("ProfilesLib");
 
     private int mConnectionId;
     private int mValue;
@@ -285,17 +280,12 @@ public final class ConnectionSettings implements Parcelable {
                     for (SubscriptionInfo subInfo : list) {
                         subTm = tm.createForSubscriptionId(subInfo.getSubscriptionId());
                         currentState = subTm.getDataEnabled();
-
-                        logger.log(Level.INFO, "Current state (" + subInfo.getDisplayName() + ") = " + currentState);
-                        logger.log(Level.INFO, "Is opportunistic (" + subInfo.getDisplayName() + ") = " + subInfo.isOpportunistic());
-
                         if (!subInfo.isOpportunistic() || forcedState) {
                             if (forcedState != currentState) {
                                 subTm.setDataEnabled(forcedState && !foundActive);
                             }
                             if (!foundActive) {
                                 foundActive = forcedState;
-                                logger.log(Level.INFO, "Found active = " + foundActive);
                             }
                         }
                     }
