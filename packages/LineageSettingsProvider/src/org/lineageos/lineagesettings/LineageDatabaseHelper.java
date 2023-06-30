@@ -60,7 +60,7 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "lineagesettings.db";
-    private static final int DATABASE_VERSION = 18;
+    private static final int DATABASE_VERSION = 20;
 
     private static final String DATABASE_NAME_OLD = "cmsettings.db";
 
@@ -447,17 +447,67 @@ public class LineageDatabaseHelper extends SQLiteOpenHelper{
                 }
             } catch (SQLiteDoneException ex) {
                 // LineageSettings.System.FINGERPRINT_WAKE_UNLOCK was not set,
-                // default to config_requireScreenOnToAuthEnabled value
+                // set default value based on config_performantAuthDefault
                 oldSetting = mContext.getResources().getBoolean(
-                        com.android.internal.R.bool.config_requireScreenOnToAuthEnabled) ? 1 : 0;
+                        com.android.internal.R.bool.config_performantAuthDefault) ? 0 : 1;
             } finally {
                 if (stmt != null) stmt.close();
                 db.endTransaction();
             }
+            // Previously Settings.Secure.SFPS_REQUIRE_SCREEN_ON_TO_AUTH_ENABLED
             Settings.Secure.putInt(mContext.getContentResolver(),
-                    Settings.Secure.SFPS_REQUIRE_SCREEN_ON_TO_AUTH_ENABLED,
+                    "sfps_require_screen_on_to_auth_enabled",
                     oldSetting);
             upgradeVersion = 18;
+        }
+
+        if (upgradeVersion < 19) {
+            // Set default value based on config_performantAuthDefault
+            boolean isPerformantAuth = mContext.getResources().getBoolean(
+                    com.android.internal.R.bool.config_performantAuthDefault);
+            // Previously Settings.Secure.SFPS_REQUIRE_SCREEN_ON_TO_AUTH_ENABLED
+            Integer oldSetting = Settings.Secure.getInt(mContext.getContentResolver(),
+                    "sfps_require_screen_on_to_auth_enabled", isPerformantAuth ? 0 : 1);
+            // Flip value
+            if (oldSetting.equals(1)) {
+                Settings.Secure.putInt(mContext.getContentResolver(),
+                        Settings.Secure.SFPS_PERFORMANT_AUTH_ENABLED, 0);
+            } else {
+                Settings.Secure.putInt(mContext.getContentResolver(),
+                        Settings.Secure.SFPS_PERFORMANT_AUTH_ENABLED, 1);
+            }
+            upgradeVersion = 19;
+        }
+        if (upgradeVersion < 20) {
+            final String currentPrivateDnsMode = Settings.Global.getString(
+                    mContext.getContentResolver(), Settings.Global.PRIVATE_DNS_MODE);
+            if ("cloudflare".equals(currentPrivateDnsMode)) {
+                // DoT, used at time of migration
+                ConnectivitySettingsManager.setPrivateDnsHostname(mContext, "one.one.one.one");
+                ConnectivitySettingsManager.setPrivateDnsMode(mContext,
+                        ConnectivitySettingsManager.PRIVATE_DNS_MODE_PROVIDER_HOSTNAME);
+            } else if ("adguard".equals(currentPrivateDnsMode)) {
+                // DoT, used at time of migration
+                ConnectivitySettingsManager.setPrivateDnsHostname(mContext, "dns.adguard.com");
+                ConnectivitySettingsManager.setPrivateDnsMode(mContext,
+                        ConnectivitySettingsManager.PRIVATE_DNS_MODE_PROVIDER_HOSTNAME);
+            } else if ("open_dns".equals(currentPrivateDnsMode)) {
+                // DoT, used at time of migration
+                ConnectivitySettingsManager.setPrivateDnsHostname(mContext, "dns.opendns.com");
+                ConnectivitySettingsManager.setPrivateDnsMode(mContext,
+                        ConnectivitySettingsManager.PRIVATE_DNS_MODE_PROVIDER_HOSTNAME);
+            } else if ("cleanbrowsing".equals(currentPrivateDnsMode)) {
+                // DoT, used at time of migration
+                ConnectivitySettingsManager.setPrivateDnsHostname(mContext, "security-filter-dns.cleanbrowsing.org");
+                ConnectivitySettingsManager.setPrivateDnsMode(mContext,
+                        ConnectivitySettingsManager.PRIVATE_DNS_MODE_PROVIDER_HOSTNAME);
+            } else if ("quad9".equals(currentPrivateDnsMode)) {
+                // DoT, used at time of migration
+                ConnectivitySettingsManager.setPrivateDnsHostname(mContext, "dns.quad9.net");
+                ConnectivitySettingsManager.setPrivateDnsMode(mContext,
+                        ConnectivitySettingsManager.PRIVATE_DNS_MODE_PROVIDER_HOSTNAME);
+            }
+            upgradeVersion = 20;
         }
         // *** Remember to update DATABASE_VERSION above!
         if (upgradeVersion != newVersion) {
