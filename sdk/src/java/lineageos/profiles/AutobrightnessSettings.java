@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2015 The CyanogenMod Project
+ * Copyright (C) 2023 GisteRom
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,11 +16,8 @@
 
 package lineageos.profiles;
 
-import static java.lang.Math.exp;
-import static java.lang.Math.round;
-import static java.lang.Math.toIntExact;
-
 import android.content.Context;
+import android.content.Intent;
 import android.provider.Settings;
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -36,63 +33,74 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 
 /**
- * The {@link BrightnessSettings} class allows for overriding and setting the brightness level
- * of the display. The range for brightness is between 0 -> 255.
+ * The {@link AutobrightnessSettings} class allows for overriding and setting the autobrightness
+ * of the display.
  *
- * <p>Example for setting the brightness to ~25% (255 * .25):
+ * <p>Example for setting the autobrightness to enabled:
  * <pre class="prettyprint">
- * BrightnessSettings twentyFivePercent = new BrightnessSettings(63, true)
- * profile.setBrightness(twentyFivePercent);
+ * AutobrightnessSettings autobrightness = new AutobrightnessSettings(BooleanState.STATE_ENABLED, true)
+ * profile.setAutobrightness(autobrightness);
  * </pre>
  */
-public final class BrightnessSettings implements Parcelable {
+public final class AutobrightnessSettings implements Parcelable {
 
     private int mValue;
     private boolean mOverride;
     private boolean mDirty;
 
     /** @hide */
-    public static final Parcelable.Creator<BrightnessSettings> CREATOR
-            = new Parcelable.Creator<BrightnessSettings>() {
-        public BrightnessSettings createFromParcel(Parcel in) {
-            return new BrightnessSettings(in);
+    public static final Parcelable.Creator<AutobrightnessSettings> CREATOR =
+            new Parcelable.Creator<AutobrightnessSettings>() {
+        public AutobrightnessSettings createFromParcel(Parcel in) {
+            return new AutobrightnessSettings(in);
         }
 
         @Override
-        public BrightnessSettings[] newArray(int size) {
-            return new BrightnessSettings[size];
+        public AutobrightnessSettings[] newArray(int size) {
+            return new AutobrightnessSettings[size];
         }
     };
 
     /**
-     * Unwrap {@link BrightnessSettings} from a parcel.
+     * BooleanStates for specific {@link AutobrightnessSettings}
+     */
+    public static class BooleanState {
+        /** Disabled state */
+        public static final int STATE_DISABLED = 0;
+        /** Enabled state */
+        public static final int STATE_ENABLED = 1;
+    }
+
+    /**
+     * Unwrap {@link AutobrightnessSettings} from a parcel.
      * @param parcel
      */
-    public BrightnessSettings(Parcel parcel) {
+    public AutobrightnessSettings(Parcel parcel) {
         readFromParcel(parcel);
     }
 
     /**
-     * Construct a {@link BrightnessSettings} with a default value of 0.
+     * Construct a {@link AutobrightnessSettings} with a default value of
+     * {@link BooleanState#STATE_DISABLED}.
      */
-    public BrightnessSettings() {
-        this(0, false);
+    public AutobrightnessSettings() {
+        this(BooleanState.STATE_DISABLED, false);
     }
 
     /**
-     * Construct a {@link BrightnessSettings} with a default value and whether or not it should
+     * Construct a {@link AutobrightnessSettings} with a default value and whether or not it should
      * override user settings.
-     * @param value ex: 255 (MAX)
+     * @param value ex: {@link BooleanState#STATE_DISABLED}
      * @param override whether or not the setting should override user settings
      */
-    public BrightnessSettings(int value, boolean override) {
+    public AutobrightnessSettings(int value, boolean override) {
         mValue = value;
         mOverride = override;
         mDirty = false;
     }
 
     /**
-     * Get the default value for the {@link BrightnessSettings}
+     * Get the default value for the {@link AutobrightnessSettings}
      * @return integer value corresponding with its brightness value
      */
     public int getValue() {
@@ -100,8 +108,8 @@ public final class BrightnessSettings implements Parcelable {
     }
 
     /**
-     * Set the default value for the {@link BrightnessSettings}
-     * @param value ex: 255 (MAX)
+     * Set the default value for the {@link AutobrightnessSettings}
+     * @param value {@link BooleanState#STATE_DISABLED}
      */
     public void setValue(int value) {
         mValue = value;
@@ -109,7 +117,7 @@ public final class BrightnessSettings implements Parcelable {
     }
 
     /**
-     * Set whether or not the {@link BrightnessSettings} should override default user values
+     * Set whether or not the {@link AutobrightnessSettings} should override default user values
      * @param override boolean override
      */
     public void setOverride(boolean override) {
@@ -118,7 +126,7 @@ public final class BrightnessSettings implements Parcelable {
     }
 
     /**
-     * Check whether or not the {@link BrightnessSettings} overrides user settings.
+     * Check whether or not the {@link AutobrightnessSettings} overrides user settings.
      * @return true if override
      */
     public boolean isOverride() {
@@ -133,69 +141,46 @@ public final class BrightnessSettings implements Parcelable {
     /** @hide */
     public void processOverride(Context context) {
         if (isOverride()) {
-            final boolean automatic = Settings.System.getInt(context.getContentResolver(),
+            int current = Settings.System.getInt(context.getContentResolver(),
+                Settings.System.SCREEN_BRIGHTNESS_MODE,
+                Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL);
+            if (current != mValue) {
+                Settings.System.putInt(context.getContentResolver(),
                     Settings.System.SCREEN_BRIGHTNESS_MODE,
-                    Settings.System.SCREEN_BRIGHTNESS_MODE_MANUAL)
-                    == Settings.System.SCREEN_BRIGHTNESS_MODE_AUTOMATIC;
-            if (automatic) {
-                final float current = Settings.System.getFloat(context.getContentResolver(),
-                        Settings.System.SCREEN_AUTO_BRIGHTNESS_ADJ, -2f);
-                // Convert from [0, 255] to [-1, 1] for SCREEN_AUTO_BRIGHTNESS_ADJ
-                final float adj = mValue / (255 / 2f) - 1;
-                if (current != adj) {
-                    Settings.System.putFloat(context.getContentResolver(),
-                            Settings.System.SCREEN_AUTO_BRIGHTNESS_ADJ, adj);
-                }
-            } else {
-                final int current = Settings.System.getInt(context.getContentResolver(),
-                        Settings.System.SCREEN_BRIGHTNESS, -1);
-
-                // Adjust to new logaritmic Android scale
-                float percentage = mValue / 255f * 100f;
-                int adj = 1;
-
-                if (percentage <= 1) {
-                    adj = 1;
-                } else if (percentage >= 100) {
-                    adj = 255;
-                } else {
-                    adj = toIntExact(round(exp((percentage + 9.411) / 19.811)));
-                }
-
-                if (current != adj) {
-                    Settings.System.putInt(context.getContentResolver(),
-                            Settings.System.SCREEN_BRIGHTNESS, adj);
-                }
+                    mValue);
             }
         }
     }
 
     /** @hide */
-    public static BrightnessSettings fromXml(XmlPullParser xpp, Context context)
+    public static AutobrightnessSettings fromXml(XmlPullParser xpp, Context context)
             throws XmlPullParserException, IOException {
         int event = xpp.next();
-        BrightnessSettings brightnessDescriptor = new BrightnessSettings();
-        while (event != XmlPullParser.END_TAG || !xpp.getName().equals("brightnessDescriptor")) {
+        AutobrightnessSettings autobrightnessDescriptor = new AutobrightnessSettings();
+        while ((event != XmlPullParser.END_TAG && event != XmlPullParser.END_DOCUMENT) ||
+                !xpp.getName().equals("autobrightnessDescriptor")) {
             if (event == XmlPullParser.START_TAG) {
                 String name = xpp.getName();
                 if (name.equals("value")) {
-                    brightnessDescriptor.mValue = Integer.parseInt(xpp.nextText());
+                    autobrightnessDescriptor.mValue = Integer.parseInt(xpp.nextText());
                 } else if (name.equals("override")) {
-                    brightnessDescriptor.mOverride = Boolean.parseBoolean(xpp.nextText());
+                    autobrightnessDescriptor.mOverride = Boolean.parseBoolean(xpp.nextText());
                 }
+            } else if (event == XmlPullParser.END_DOCUMENT) {
+                throw new IOException("Premature end of file while parsing autobrightness settings");
             }
             event = xpp.next();
         }
-        return brightnessDescriptor;
+        return autobrightnessDescriptor;
     }
 
     /** @hide */
     public void getXmlString(StringBuilder builder, Context context) {
-        builder.append("<brightnessDescriptor>\n<value>");
+        builder.append("<autobrightnessDescriptor>\n<value>");
         builder.append(mValue);
         builder.append("</value>\n<override>");
         builder.append(mOverride);
-        builder.append("</override>\n</brightnessDescriptor>\n");
+        builder.append("</override>\n</autobrightnessDescriptor>\n");
     }
 
     @Override
