@@ -224,7 +224,7 @@
          This needs to match the enums in
          sdk/src/java/org/lineageos/internal/util/DeviceKeysConstants.java.
     -->
-    <integer name="config_doubleTapOnHomeBehavior">3</integer>
+    <integer name="config_doubleTapOnHomeBehavior">0</integer>
 
     <!-- Control the behavior when the user long presses the menu button.
             0 - Nothing
