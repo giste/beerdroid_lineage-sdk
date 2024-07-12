@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">სისტემის პროფილების შესწორება</string>
     <string name="permdesc_modifyProfiles">პროგრამისთვის ნების დართვა, შეცვალოს სისტემის პროფილები.</string>
     <string name="permlab_useHardwareFramework">აპარატურული გარსის გამოყენება</string>
-    <string name="permdesc_useHardwareFramework">პროგრამისთვის ნების დართვა Lineage-ის აპარატურულ გარსთან წვდომისთვის.</string>
-    <string name="permlab_writeSettings">Lineage-სისტემის დაცული პარამეტრების შეცვლა</string>
-    <string name="permdesc_writeSettings">პროგრამისთვის ნების დართვა, შეცვალოს Lineage-სისტემის პარამეტრები.</string>
-    <string name="permlab_writeSecureSettings">Lineage-სისტემის დაცული სისტემური პარამეტრების შეცვლა</string>
-    <string name="permdesc_writeSecureSettings">ნებართვა, რომ აპი შეძლებს შეცვალოს Lineage-სისტემის დაცული პარამეტრები. არაა განკუთვნილი ჩვეულებრივი აპებისთვის.</string>
+    <string name="permdesc_useHardwareFramework">პროგრამისთვის ნების დართვა crDroid-ის აპარატურულ გარსთან წვდომისთვის.</string>
+    <string name="permlab_writeSettings">crDroid-სისტემის დაცული პარამეტრების შეცვლა</string>
+    <string name="permdesc_writeSettings">პროგრამისთვის ნების დართვა, შეცვალოს crDroid-სისტემის პარამეტრები.</string>
+    <string name="permlab_writeSecureSettings">crDroid-სისტემის დაცული სისტემური პარამეტრების შეცვლა</string>
+    <string name="permdesc_writeSecureSettings">ნებართვა, რომ აპი შეძლებს შეცვალოს crDroid-სისტემის დაცული პარამეტრები. არაა განკუთვნილი ჩვეულებრივი აპებისთვის.</string>
     <string name="profileNameDefault">ნაგულისხმევი</string>
     <string name="profileNameWork">სამუშაო</string>
     <string name="profileNameHome">სახლი</string>

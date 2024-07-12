@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">Systemprofile ändern</string>
     <string name="permdesc_modifyProfiles">Ermöglicht der App, Systemprofile zu ändern.</string>
     <string name="permlab_useHardwareFramework">Hardware-Framework verwenden</string>
-    <string name="permdesc_useHardwareFramework">Ermöglicht der App, auf das Lineage-Hardwareframework zuzugreifen.</string>
-    <string name="permlab_writeSettings">Lineage-Systemeinstellungen ändern</string>
-    <string name="permdesc_writeSettings">Ermöglicht der App, Lineage-Systemeinstellungen zu ändern.</string>
-    <string name="permlab_writeSecureSettings">Lineage-Sicherheitssystemeinstellungen ändern</string>
-    <string name="permdesc_writeSecureSettings">Ermöglicht der App, Lineage-Sicherheitssystemeinstellungen zu ändern. Nicht für die Nutzung durch normale Apps bestimmt.</string>
+    <string name="permdesc_useHardwareFramework">Ermöglicht der App, auf das crDroid-Hardwareframework zuzugreifen.</string>
+    <string name="permlab_writeSettings">crDroid-Systemeinstellungen ändern</string>
+    <string name="permdesc_writeSettings">Ermöglicht der App, crDroid-Systemeinstellungen zu ändern.</string>
+    <string name="permlab_writeSecureSettings">crDroid-Sicherheitssystemeinstellungen ändern</string>
+    <string name="permdesc_writeSecureSettings">Ermöglicht der App, crDroid-Sicherheitssystemeinstellungen zu ändern. Nicht für die Nutzung durch normale Apps bestimmt.</string>
     <string name="profileNameDefault">Standard</string>
     <string name="profileNameWork">Arbeit</string>
     <string name="profileNameHome">Zu Hause</string>

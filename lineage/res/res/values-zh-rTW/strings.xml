@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">修改系統設定檔</string>
     <string name="permdesc_modifyProfiles">允許應用程式修改系統設定檔。</string>
     <string name="permlab_useHardwareFramework">使用硬體框架</string>
-    <string name="permdesc_useHardwareFramework">允許應用程式存取 Lineage 硬體框架。</string>
-    <string name="permlab_writeSettings">修改 Lineage 系統設定</string>
-    <string name="permdesc_writeSettings">允許應用程式修改 Lineage 系統設定。</string>
-    <string name="permlab_writeSecureSettings">修改 Lineage 系統安全設定</string>
-    <string name="permdesc_writeSecureSettings">允許應用程式修改 Lineage 系統安全設定。僅供偵錯使用。</string>
+    <string name="permdesc_useHardwareFramework">允許應用程式存取 crDroid 硬體框架。</string>
+    <string name="permlab_writeSettings">修改 crDroid 系統設定</string>
+    <string name="permdesc_writeSettings">允許應用程式修改 crDroid 系統設定。</string>
+    <string name="permlab_writeSecureSettings">修改 crDroid 系統安全設定</string>
+    <string name="permdesc_writeSecureSettings">允許應用程式修改 crDroid 系統安全設定。僅供偵錯使用。</string>
     <string name="profileNameDefault">預設</string>
     <string name="profileNameWork">工作</string>
     <string name="profileNameHome">住家</string>

@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">aldatu sistemaren profilak</string>
     <string name="permdesc_modifyProfiles">Sistemaren profilak aldatzea ahalbidetzen dio aplikazioari.</string>
     <string name="permlab_useHardwareFramework">hardware markoa erabili</string>
-    <string name="permdesc_useHardwareFramework">Aplikazioari Lineage hardware markorako sarbidea gaitzen dio.</string>
-    <string name="permlab_writeSettings">aldatu Lineage sistemaren ezarpenak</string>
-    <string name="permdesc_writeSettings">Lineage sistemaren ezarpenak aldatzea ahalbidetzen dio aplikazioari.</string>
-    <string name="permlab_writeSecureSettings">aldatu Lineage sistemaren ezarpen seguruak</string>
-    <string name="permdesc_writeSecureSettings">Lineage sistemaren ezarpen seguruak aldatzea ahalbidetzen dio aplikazioari. Aplikazio arruntek ez dute behar.</string>
+    <string name="permdesc_useHardwareFramework">Aplikazioari crDroid hardware markorako sarbidea gaitzen dio.</string>
+    <string name="permlab_writeSettings">aldatu crDroid sistemaren ezarpenak</string>
+    <string name="permdesc_writeSettings">crDroid sistemaren ezarpenak aldatzea ahalbidetzen dio aplikazioari.</string>
+    <string name="permlab_writeSecureSettings">aldatu crDroid sistemaren ezarpen seguruak</string>
+    <string name="permdesc_writeSecureSettings">crDroid sistemaren ezarpen seguruak aldatzea ahalbidetzen dio aplikazioari. Aplikazio arruntek ez dute behar.</string>
     <string name="profileNameDefault">Lehenetsia</string>
     <string name="profileNameWork">Lanean</string>
     <string name="profileNameHome">Etxean</string>

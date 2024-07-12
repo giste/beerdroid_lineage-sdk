@@ -20,10 +20,10 @@
     <string name="permlab_modifyProfiles">upraviť systémové profily</string>
     <string name="permdesc_modifyProfiles">Umožňuje aplikácii upraviť systémové profily.</string>
     <string name="permlab_useHardwareFramework">používať hardvérový framework</string>
-    <string name="permdesc_useHardwareFramework">Umožňuje aplikácii pristupovať k hardvérovému rámcu Lineage.</string>
-    <string name="permlab_writeSettings">zmeniť nastavenia systému Lineage</string>
-    <string name="permdesc_writeSettings">Umožňuje aplikácii meniť nastavenia systému Lineage.</string>
-    <string name="permlab_writeSecureSettings">zmeniť nastavenia zabezpečenia systému Lineage</string>
+    <string name="permdesc_useHardwareFramework">Umožňuje aplikácii pristupovať k hardvérovému rámcu crDroid.</string>
+    <string name="permlab_writeSettings">zmeniť nastavenia systému crDroid</string>
+    <string name="permdesc_writeSettings">Umožňuje aplikácii meniť nastavenia systému crDroid.</string>
+    <string name="permlab_writeSecureSettings">zmeniť nastavenia zabezpečenia systému crDroid</string>
     <string name="permdesc_writeSecureSettings">Umožňuje aplikácii zmeniť nastavenia zabezpečenia systému Lienage. Nie je určené pre bežné aplikácie.</string>
     <string name="profileNameDefault">Predvolený</string>
     <string name="profileNameWork">Práca</string>

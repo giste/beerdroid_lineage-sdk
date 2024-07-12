@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">modifiche profîi di sisteme</string>
     <string name="permdesc_modifyProfiles">Al permet a une aplicazion di modificâ i profîi di sisteme.</string>
     <string name="permlab_useHardwareFramework">dopre la suaze di vore hardware</string>
-    <string name="permdesc_useHardwareFramework">Al permet a une aplicazion di acedi ae suaze di lavôr hardware di Lineage.</string>
-    <string name="permlab_writeSettings">modifiche lis impostazions di sisteme di Lineage</string>
-    <string name="permdesc_writeSettings">Al permet a une aplicazion di modificâ lis impostazions di sisteme di Lineage.</string>
-    <string name="permlab_writeSecureSettings">modifiche lis impostazions siguris dal sisteme di Lineage</string>
-    <string name="permdesc_writeSecureSettings">Al permet a une aplicazion di modificâ lis impostazions siguris dal sisteme di Lineage. No doprât da lis aplicazions normâls.</string>
+    <string name="permdesc_useHardwareFramework">Al permet a une aplicazion di acedi ae suaze di lavôr hardware di crDroid.</string>
+    <string name="permlab_writeSettings">modifiche lis impostazions di sisteme di crDroid</string>
+    <string name="permdesc_writeSettings">Al permet a une aplicazion di modificâ lis impostazions di sisteme di crDroid.</string>
+    <string name="permlab_writeSecureSettings">modifiche lis impostazions siguris dal sisteme di crDroid</string>
+    <string name="permdesc_writeSecureSettings">Al permet a une aplicazion di modificâ lis impostazions siguris dal sisteme di crDroid. No doprât da lis aplicazions normâls.</string>
     <string name="profileNameDefault">Predefinît</string>
     <string name="profileNameWork">Lavôr</string>
     <string name="profileNameHome">Cjase</string>

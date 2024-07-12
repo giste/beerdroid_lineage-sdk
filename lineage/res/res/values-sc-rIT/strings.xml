@@ -19,8 +19,8 @@
     <string name="lineageos_system_label">Sistema crDroid</string>
     <string name="permlab_modifyProfiles">modìfica sos profilos de sistema</string>
     <string name="permdesc_modifyProfiles">Permitit a un\'aplicatzione de modificare sos profilos de sistema.</string>
-    <string name="permlab_writeSettings">modìfica sas impostatziones de sistema de Lineage</string>
-    <string name="permdesc_writeSettings">Permitit a un\'aplicatzione de modificare sas impostatziones de sistema de Lineage.</string>
+    <string name="permlab_writeSettings">modìfica sas impostatziones de sistema de crDroid</string>
+    <string name="permdesc_writeSettings">Permitit a un\'aplicatzione de modificare sas impostatziones de sistema de crDroid.</string>
     <string name="profileNameDefault">Predefinidu</string>
     <string name="profileNameWork">Traballu</string>
     <string name="profileNameHome">Domo</string>

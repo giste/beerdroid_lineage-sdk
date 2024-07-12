@@ -25,15 +25,15 @@
 
     <!-- Labels for the HARDWARE_ABSTRACTION_ACCESS permission. -->
     <string name="permlab_useHardwareFramework">use hardware framework</string>
-    <string name="permdesc_useHardwareFramework">Allows an app access to the Lineage hardware framework.</string>
+    <string name="permdesc_useHardwareFramework">Allows an app access to the crDroid hardware framework.</string>
 
     <!-- Labels for the WRITE_SETTINGS permission -->
-    <string name="permlab_writeSettings">modify Lineage system settings</string>
-    <string name="permdesc_writeSettings">Allows an app to modify Lineage system settings.</string>
+    <string name="permlab_writeSettings">modify crDroid system settings</string>
+    <string name="permdesc_writeSettings">Allows an app to modify crDroid system settings.</string>
 
     <!-- Labels for the WRITE_SECURE_SETTINGS permission -->
-    <string name="permlab_writeSecureSettings">modify Lineage secure system settings</string>
-    <string name="permdesc_writeSecureSettings">Allows an app to modify Lineage secure system settings. Not for use by normal apps.</string>
+    <string name="permlab_writeSecureSettings">modify crDroid secure system settings</string>
+    <string name="permdesc_writeSecureSettings">Allows an app to modify crDroid secure system settings. Not for use by normal apps.</string>
 
     <!-- Profiles -->
     <!-- Names of default profiles. -->

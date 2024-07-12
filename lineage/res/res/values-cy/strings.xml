@@ -20,10 +20,10 @@
     <string name="permlab_modifyProfiles">addasu proffiliau system</string>
     <string name="permdesc_modifyProfiles">Mae\'n caniatáu i ap addasu proffiliau system.</string>
     <string name="permlab_useHardwareFramework">defnyddio fframwaith caledwedd</string>
-    <string name="permdesc_useHardwareFramework">Mae\'n caniatáu i ap gyrchu fframwaith caledwedd Lineage.</string>
-    <string name="permlab_writeSettings">addasu gosodiadau system Lineage</string>
+    <string name="permdesc_useHardwareFramework">Mae\'n caniatáu i ap gyrchu fframwaith caledwedd crDroid.</string>
+    <string name="permlab_writeSettings">addasu gosodiadau system crDroid</string>
     <string name="permdesc_writeSettings">Mae\'n caniatáu i ap addasu gosodiadau system crDroid.</string>
-    <string name="permlab_writeSecureSettings">addasu gosodiadau system ddiogel Lineage</string>
+    <string name="permlab_writeSecureSettings">addasu gosodiadau system ddiogel crDroid</string>
     <string name="permdesc_writeSecureSettings">Mae\'n caniatáu i ap addasu gosodiadau system ddiogel crDroid. Dim i\'w ddefnyddio gan apiau arferol.</string>
     <string name="profileNameDefault">Rhagosodiad</string>
     <string name="profileNameWork">Gwaith</string>
@@ -87,6 +87,7 @@
     <string name="charging_control_notification_title">Rheolaeth gwefru</string>
     <string name="charging_control_notification_cancel_once">Diddymu</string>
     <string name="charging_control_notification_content_limit">Caiff y batri ei wefru at %1$d%%</string>
+    <string name="charging_control_notification_content_limit_reached">Batri wedi\u2019i wefru at %1$d%%</string>
     <string name="charging_control_notification_content_target">Caiff y batri ei wefru\u2019n llawn am %1$s</string>
     <string name="charging_control_notification_content_target_reached">Batri wedi\u2019i wefru</string>
 </resources>

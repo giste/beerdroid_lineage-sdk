@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">memodifikasi profil sistem</string>
     <string name="permdesc_modifyProfiles">Mengizinkan aplikasi untuk mengubah profil sistem.</string>
     <string name="permlab_useHardwareFramework">gunakan hardware framework</string>
-    <string name="permdesc_useHardwareFramework">Izinkan aplikasi untuk mengakses susunan perangkat keras Lineage.</string>
-    <string name="permlab_writeSettings">mengubah setelah sistem Lineage</string>
-    <string name="permdesc_writeSettings">Izinkan aplikasi untuk memodifikasi setelan sistem Lineage.</string>
-    <string name="permlab_writeSecureSettings">memodifikasi setelan sistem keamanan Lineage</string>
-    <string name="permdesc_writeSecureSettings">Izinkan aplikasi untuk memodifikasi setelan sistem keamanan Lineage. Tidak untuk digunakan oleh aplikasi yang normal.</string>
+    <string name="permdesc_useHardwareFramework">Izinkan aplikasi untuk mengakses susunan perangkat keras crDroid.</string>
+    <string name="permlab_writeSettings">mengubah setelah sistem crDroid</string>
+    <string name="permdesc_writeSettings">Izinkan aplikasi untuk memodifikasi setelan sistem crDroid.</string>
+    <string name="permlab_writeSecureSettings">memodifikasi setelan sistem keamanan crDroid</string>
+    <string name="permdesc_writeSecureSettings">Izinkan aplikasi untuk memodifikasi setelan sistem keamanan crDroid. Tidak untuk digunakan oleh aplikasi yang normal.</string>
     <string name="profileNameDefault">Standar</string>
     <string name="profileNameWork">Kerja</string>
     <string name="profileNameHome">Beranda</string>

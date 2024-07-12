@@ -19,7 +19,7 @@
     <string name="lineageos_system_label">Сістэма crDroid</string>
     <string name="permlab_modifyProfiles">змена сістэмных профіляў</string>
     <string name="permdesc_modifyProfiles">Дазваляе праграме змяняць сістэмныя профілі.</string>
-    <string name="permlab_writeSettings">змяніць налады сістэмы Lineage</string>
+    <string name="permlab_writeSettings">змяніць налады сістэмы crDroid</string>
     <string name="profileNameDefault">Прадвызначана</string>
     <string name="profileNameWork">Праца</string>
     <string name="profileNameHome">Дом</string>

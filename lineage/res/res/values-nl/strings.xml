@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">systeemprofielen wijzigen</string>
     <string name="permdesc_modifyProfiles">Hiermee kan de app systeemprofielen wijzigen.</string>
     <string name="permlab_useHardwareFramework">hardware-framework gebruiken</string>
-    <string name="permdesc_useHardwareFramework">Hiermee kan de app toegang krijgen tot het hardware-framework van Lineage.</string>
-    <string name="permlab_writeSettings">Lineage-systeeminstellingen wijzigen</string>
-    <string name="permdesc_writeSettings">Staat een app toe de systeeminstellingen van Lineage te wijzigen.</string>
-    <string name="permlab_writeSecureSettings">beveiligde Lineage-systeeminstellingen wijzigen</string>
-    <string name="permdesc_writeSecureSettings">Hiermee kan de app de beveiligde systeeminstellingen van Lineage wijzigen. Niet voor gebruik door normale apps.</string>
+    <string name="permdesc_useHardwareFramework">Hiermee kan de app toegang krijgen tot het hardware-framework van crDroid.</string>
+    <string name="permlab_writeSettings">crDroid-systeeminstellingen wijzigen</string>
+    <string name="permdesc_writeSettings">Staat een app toe de systeeminstellingen van crDroid te wijzigen.</string>
+    <string name="permlab_writeSecureSettings">beveiligde crDroid-systeeminstellingen wijzigen</string>
+    <string name="permdesc_writeSecureSettings">Hiermee kan de app de beveiligde systeeminstellingen van crDroid wijzigen. Niet voor gebruik door normale apps.</string>
     <string name="profileNameDefault">Standaard</string>
     <string name="profileNameWork">Werk</string>
     <string name="profileNameHome">Thuis</string>

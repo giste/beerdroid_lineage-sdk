@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">modifiko profilet e sistemit</string>
     <string name="permdesc_modifyProfiles">Lejon një aplikacion që të modifikojë profilet e sistemit.</string>
     <string name="permlab_useHardwareFramework">përdor strukturën hardware</string>
-    <string name="permdesc_useHardwareFramework">Lejon një app të hyjë në strukturën elektronike të Lineage.</string>
-    <string name="permlab_writeSettings">modifiko parametrat e sistemit Lineage</string>
-    <string name="permdesc_writeSettings">Lejon app të modifikojë parametrat e sistemit Lineage.</string>
-    <string name="permlab_writeSecureSettings">modifiko parametrat e sigurisë së sistemit Lineage</string>
-    <string name="permdesc_writeSecureSettings">Lejon një app të ndryshojë parametrat e sigurisë së sistemit Lineage. Jo për përdorim nga app normale.</string>
+    <string name="permdesc_useHardwareFramework">Lejon një app të hyjë në strukturën elektronike të crDroid.</string>
+    <string name="permlab_writeSettings">modifiko parametrat e sistemit crDroid</string>
+    <string name="permdesc_writeSettings">Lejon app të modifikojë parametrat e sistemit crDroid.</string>
+    <string name="permlab_writeSecureSettings">modifiko parametrat e sigurisë së sistemit crDroid</string>
+    <string name="permdesc_writeSecureSettings">Lejon një app të ndryshojë parametrat e sigurisë së sistemit crDroid. Jo për përdorim nga app normale.</string>
     <string name="profileNameDefault">I paracaktuar</string>
     <string name="profileNameWork">Në punë</string>
     <string name="profileNameHome">Në shtëpi</string>
@@ -81,7 +81,7 @@
     <string name="trust_notification_channel">Paralajmërime Trust</string>
     <string name="trust_notification_title_security">Trust \u2022 sigurinë e Sistemit</string>
     <string name="trust_notification_content_selinux">SELinux nuk është e zbatuar, siguria juaj është dobësuar</string>
-    <string name="trust_notification_content_keys">Ky zhvillim është nënshkruar me çelsa publik</string>
+    <string name="trust_notification_content_keys">Ky ndërtim është nënshkruar me çelsa publik</string>
     <string name="trust_notification_title_onboarding">Zbulo Trust</string>
     <string name="trust_notification_content_onboarding">Informohu si të sigurohesh që paisja juaj është e sigurtë</string>
     <string name="trust_notification_action_manage">Menaxho paralajmërimet</string>

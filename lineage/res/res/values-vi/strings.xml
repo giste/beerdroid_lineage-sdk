@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">sửa đổi cấu hình hệ thống</string>
     <string name="permdesc_modifyProfiles">Cho phép một ứng dụng sửa đổi cấu hình hệ thống.</string>
     <string name="permlab_useHardwareFramework">dùng khung làm việc phần cứng</string>
-    <string name="permdesc_useHardwareFramework">Cho phép ứng dụng truy cập khung làm việc phần cứng Lineage.</string>
-    <string name="permlab_writeSettings">sửa đổi cài đặt hệ thống Lineage</string>
-    <string name="permdesc_writeSettings">Cho phép một ứng dụng chỉnh sửa cài đặt hệ thống Lineage.</string>
-    <string name="permlab_writeSecureSettings">sửa đổi cài đặt hệ thống bảo mật Lineage</string>
-    <string name="permdesc_writeSecureSettings">Cho phép một ứng dụng sửa đổi cài đặt hệ thống bảo mật của Lineage. Không cho các ứng dụng thông thường sử dụng.</string>
+    <string name="permdesc_useHardwareFramework">Cho phép ứng dụng truy cập khung làm việc phần cứng crDroid.</string>
+    <string name="permlab_writeSettings">sửa đổi cài đặt hệ thống crDroid</string>
+    <string name="permdesc_writeSettings">Cho phép một ứng dụng chỉnh sửa cài đặt hệ thống crDroid.</string>
+    <string name="permlab_writeSecureSettings">sửa đổi cài đặt hệ thống bảo mật crDroid</string>
+    <string name="permdesc_writeSecureSettings">Cho phép một ứng dụng sửa đổi cài đặt hệ thống bảo mật của crDroid. Không cho các ứng dụng thông thường sử dụng.</string>
     <string name="profileNameDefault">Mặc định</string>
     <string name="profileNameWork">Văn phòng</string>
     <string name="profileNameHome">Ở nhà</string>

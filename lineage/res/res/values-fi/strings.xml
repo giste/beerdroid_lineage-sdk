@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">muokkaa järjestelmän profiileja</string>
     <string name="permdesc_modifyProfiles">Sallii sovelluksen muokata järjestelmäprofiileja.</string>
     <string name="permlab_useHardwareFramework">käytä laitteiston kehystä</string>
-    <string name="permdesc_useHardwareFramework">Sallii sovelluksen pääsyn Lineage-laitteiston kehykseen.</string>
-    <string name="permlab_writeSettings">muokkaa Lineage-järjestelmän asetuksia</string>
-    <string name="permdesc_writeSettings">Sallii sovelluksen muokata Lineage-järjestelmän asetuksia.</string>
-    <string name="permlab_writeSecureSettings">muokkaa Lineage-turvallisuusjärjestelmän asetuksia</string>
-    <string name="permdesc_writeSecureSettings">Sallii sovelluksen muokata Lineage turvallisuusjärjestelmäasetuksia. Ei käytössä tavallisille sovelluksille.</string>
+    <string name="permdesc_useHardwareFramework">Sallii sovelluksen pääsyn crDroid-laitteiston kehykseen.</string>
+    <string name="permlab_writeSettings">muokkaa crDroid-järjestelmän asetuksia</string>
+    <string name="permdesc_writeSettings">Sallii sovelluksen muokata crDroid-järjestelmän asetuksia.</string>
+    <string name="permlab_writeSecureSettings">muokkaa crDroid-turvallisuusjärjestelmän asetuksia</string>
+    <string name="permdesc_writeSecureSettings">Sallii sovelluksen muokata crDroid turvallisuusjärjestelmäasetuksia. Ei käytössä tavallisille sovelluksille.</string>
     <string name="profileNameDefault">Oletus</string>
     <string name="profileNameWork">Työ</string>
     <string name="profileNameHome">Koti</string>
@@ -83,4 +83,5 @@
     <string name="trust_notification_title_onboarding">Löydä Trust</string>
     <string name="trust_notification_content_onboarding">Selvitä miten voit varmistaa laitteesi olevan turvassa</string>
     <string name="trust_notification_action_manage">Hallitse hälytyksiä</string>
+    <string name="charging_control_notification_cancel_once">Peruuta</string>
 </resources>

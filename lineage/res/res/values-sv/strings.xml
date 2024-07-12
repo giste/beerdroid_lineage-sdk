@@ -21,10 +21,10 @@
     <string name="permdesc_modifyProfiles">Tillåter att en app ändrar systemprofiler.</string>
     <string name="permlab_useHardwareFramework">använda hårdvaruramverk</string>
     <string name="permdesc_useHardwareFramework">Ger en app åtkomst till crDroid hårdvaruramverk.</string>
-    <string name="permlab_writeSettings">ändra Lineages systeminställningar</string>
-    <string name="permdesc_writeSettings">Tillåter en app att ändra Lineages systeminställningar.</string>
-    <string name="permlab_writeSecureSettings">ändra skyddade Lineage-inställningar</string>
-    <string name="permdesc_writeSecureSettings">Tillåter en app att ändra skyddade Lineage-inställningar. Ska inte användas av vanliga appar.</string>
+    <string name="permlab_writeSettings">ändra crDroids systeminställningar</string>
+    <string name="permdesc_writeSettings">Tillåter en app att ändra crDroids systeminställningar.</string>
+    <string name="permlab_writeSecureSettings">ändra skyddade crDroid-inställningar</string>
+    <string name="permdesc_writeSecureSettings">Tillåter en app att ändra skyddade crDroid-inställningar. Ska inte användas av vanliga appar.</string>
     <string name="profileNameDefault">Standard</string>
     <string name="profileNameWork">Jobb</string>
     <string name="profileNameHome">Hemma</string>

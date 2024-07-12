@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">ವ್ಯವಸ್ಥೆಯ ರೇಖಾಕೃತಿಗಳನ್ನು ಮಾರ್ಪಡಿಸು</string>
     <string name="permdesc_modifyProfiles">ವ್ಯವಸ್ಥೆಯ ರೇಖಾಕೃತಿಗಳನ್ನು ಮಾರ್ಪಡಿಸಲು ಒಂದು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
     <string name="permlab_useHardwareFramework">ಹಾರ್ಡ್‍ವೇರ್ ಫ್ರೇಮ್‍ವರ್ಕ್ ಉಪಯೋಗಿಸು</string>
-    <string name="permdesc_useHardwareFramework">Lineage ಯಂತ್ರಾಂಶ ಚೌಕಟ್ಟನ್ನು ಬಳಸಲು ಅಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
-    <string name="permlab_writeSettings">Lineage ವ್ಯವಸ್ಥೆಯ ಅಳವಡಿಕೆಗಳನ್ನು ಮಾರ್ಪಡಿಸು</string>
-    <string name="permdesc_writeSettings">Lineage ವ್ಯವಸ್ಥೆಯ ಅಳವಡಿಕೆಗಳನ್ನು ಮಾರ್ಪಡಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
-    <string name="permlab_writeSecureSettings">Lineage ವ್ಯವಸ್ಥೆಯ ಸುರಕ್ಷಿತ ಅಳವಡಿಕೆಗಳನ್ನು ಮಾರ್ಪಡಿಸು</string>
-    <string name="permdesc_writeSecureSettings">Lineage ವ್ಯವಸ್ಥೆಯ ಸುರಕ್ಷಿತ ಅಳವಡಿಕೆಗಳನ್ನು ಮಾರ್ಪಡಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ. ಸಾಮಾನ್ಯ ಆಪ್ಗಳ ಬಳಕೆಗೆ ಅಲ್ಲ.</string>
+    <string name="permdesc_useHardwareFramework">crDroid ಯಂತ್ರಾಂಶ ಚೌಕಟ್ಟನ್ನು ಬಳಸಲು ಅಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
+    <string name="permlab_writeSettings">crDroid ವ್ಯವಸ್ಥೆಯ ಅಳವಡಿಕೆಗಳನ್ನು ಮಾರ್ಪಡಿಸು</string>
+    <string name="permdesc_writeSettings">crDroid ವ್ಯವಸ್ಥೆಯ ಅಳವಡಿಕೆಗಳನ್ನು ಮಾರ್ಪಡಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ.</string>
+    <string name="permlab_writeSecureSettings">crDroid ವ್ಯವಸ್ಥೆಯ ಸುರಕ್ಷಿತ ಅಳವಡಿಕೆಗಳನ್ನು ಮಾರ್ಪಡಿಸು</string>
+    <string name="permdesc_writeSecureSettings">crDroid ವ್ಯವಸ್ಥೆಯ ಸುರಕ್ಷಿತ ಅಳವಡಿಕೆಗಳನ್ನು ಮಾರ್ಪಡಿಸಲು ಆಪ್ಗೆ ಅನುಮತಿಸುತ್ತದೆ. ಸಾಮಾನ್ಯ ಆಪ್ಗಳ ಬಳಕೆಗೆ ಅಲ್ಲ.</string>
     <string name="profileNameDefault">ಇದ್ದಾಯ್ಕೆ</string>
     <string name="profileNameWork">ಉದ್ಯೋಗ</string>
     <string name="profileNameHome">ತವರು</string>

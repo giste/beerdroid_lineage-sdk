@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">modifică profiluri de sistem</string>
     <string name="permdesc_modifyProfiles">Permite unei aplicații să modifice profilurile de sistem.</string>
     <string name="permlab_useHardwareFramework">folosește framework-ul hardware</string>
-    <string name="permdesc_useHardwareFramework">Permite unei aplicații să acceseze framework-ul Lineage hardware.</string>
-    <string name="permlab_writeSettings">modifică setările de sistem Lineage</string>
-    <string name="permdesc_writeSettings">Permite unei aplicații să modifice setările de sistem Lineage.</string>
-    <string name="permlab_writeSecureSettings">modifică setările de siguranță de sistem Lineage</string>
-    <string name="permdesc_writeSecureSettings">Permite unei aplicații să modifice setările de siguranță de sistem Lineage. Nu este utilizabilă de către aplicațiile normale.</string>
+    <string name="permdesc_useHardwareFramework">Permite unei aplicații să acceseze framework-ul crDroid hardware.</string>
+    <string name="permlab_writeSettings">modifică setările de sistem crDroid</string>
+    <string name="permdesc_writeSettings">Permite unei aplicații să modifice setările de sistem crDroid.</string>
+    <string name="permlab_writeSecureSettings">modifică setările de siguranță de sistem crDroid</string>
+    <string name="permdesc_writeSecureSettings">Permite unei aplicații să modifice setările de siguranță de sistem crDroid. Nu este utilizabilă de către aplicațiile normale.</string>
     <string name="profileNameDefault">Implicit</string>
     <string name="profileNameWork">Serviciu</string>
     <string name="profileNameHome">Acasă</string>

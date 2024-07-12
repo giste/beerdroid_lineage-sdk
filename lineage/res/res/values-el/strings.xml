@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">τροποποίηση προφίλ συστήματος</string>
     <string name="permdesc_modifyProfiles">Επιτρέπει σε μια εφαρμογή να τροποποιεί τα προφίλ του συστήματος.</string>
     <string name="permlab_useHardwareFramework">χρήση του πλαισίου υλικού</string>
-    <string name="permdesc_useHardwareFramework">Επιτρέπει σε μια εφαρμογή την πρόσβαση στο πλαίσιο υλικού του Lineage.</string>
-    <string name="permlab_writeSettings">τροποποίηση ρυθμίσεων συστήματος Lineage</string>
-    <string name="permdesc_writeSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ρυθμίσεις συστήματος Lineage.</string>
-    <string name="permlab_writeSecureSettings">τροποποίηση ασφαλών ρυθμίσεων συστήματος Lineage</string>
-    <string name="permdesc_writeSecureSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ασφαλείς ρυθμίσεις συστήματος Lineage. Δεν χρησιμοποιείται από κανονικές εφαρμογές.</string>
+    <string name="permdesc_useHardwareFramework">Επιτρέπει σε μια εφαρμογή την πρόσβαση στο πλαίσιο υλικού του crDroid.</string>
+    <string name="permlab_writeSettings">τροποποίηση ρυθμίσεων συστήματος crDroid</string>
+    <string name="permdesc_writeSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ρυθμίσεις συστήματος crDroid.</string>
+    <string name="permlab_writeSecureSettings">τροποποίηση ασφαλών ρυθμίσεων συστήματος crDroid</string>
+    <string name="permdesc_writeSecureSettings">Επιτρέπει σε μια εφαρμογή να τροποποιεί τις ασφαλείς ρυθμίσεις συστήματος crDroid. Δεν χρησιμοποιείται από κανονικές εφαρμογές.</string>
     <string name="profileNameDefault">Προεπιλογή</string>
     <string name="profileNameWork">Εργασία</string>
     <string name="profileNameHome">Σπίτι</string>

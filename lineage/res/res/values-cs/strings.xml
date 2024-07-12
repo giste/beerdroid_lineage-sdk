@@ -20,11 +20,11 @@
     <string name="permlab_modifyProfiles">změnit systémové profily</string>
     <string name="permdesc_modifyProfiles">Umožňuje upravovat systémové profily.</string>
     <string name="permlab_useHardwareFramework">využití hardware zařízení</string>
-    <string name="permdesc_useHardwareFramework">Umožní přistupovat k hardware pomocí systému Lineage.</string>
-    <string name="permlab_writeSettings">změnit nastavení systému Lineage</string>
-    <string name="permdesc_writeSettings">Umožní měnit nastavení systému Lineage.</string>
-    <string name="permlab_writeSecureSettings">změnit nastavení zabezpečení systému Lineage</string>
-    <string name="permdesc_writeSecureSettings">Umožní změnit nastavení zabezpečení systému Lineage. Není určeno pro běžné aplikace.</string>
+    <string name="permdesc_useHardwareFramework">Umožní přistupovat k hardware pomocí systému crDroid.</string>
+    <string name="permlab_writeSettings">změnit nastavení systému crDroid</string>
+    <string name="permdesc_writeSettings">Umožní měnit nastavení systému crDroid.</string>
+    <string name="permlab_writeSecureSettings">změnit nastavení zabezpečení systému crDroid</string>
+    <string name="permdesc_writeSecureSettings">Umožní změnit nastavení zabezpečení systému crDroid. Není určeno pro běžné aplikace.</string>
     <string name="profileNameDefault">Výchozí</string>
     <string name="profileNameWork">Práce</string>
     <string name="profileNameHome">Doma</string>
